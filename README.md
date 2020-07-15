@@ -1,6 +1,10 @@
 # NoCode-Neural-Nets PROTOTYPE
 A no-code development platform (NCDP) for rapid prototyping and visualization of neural networks behaviour on custom data.
 
+For the moment the platform only works with .csv files and fully connected networks.
+
+![alt text](https://i.ibb.co/sHPH14G/Screenshot-2020-07-15-at-16-21-19.png)
+
 To use:
 1. Download repo
 2. Go to the main 'NoCode-Neural-Nets' directory
