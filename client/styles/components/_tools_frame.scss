@@ -1,0 +1,63 @@
+.tools_frame {
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: #{15 / $base-font-size}rem;
+  margin-left: #{30 / $base-font-size}rem;
+  margin-top: #{30 / $base-font-size}rem;
+  display: inline-block;
+  @include themify() {
+    border: 3px solid map-get($theme-map, 'border-color');
+  }
+
+  &-disabled {
+    display: none;
+  }
+}
+
+.tools_frame_menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: #{600 / $base-font-size}rem;
+  overflow: scroll;
+}
+
+.tools_frame_toggling_button {
+  position: relative;
+  margin-top: #{30 / $base-font-size}rem;
+  &-open {
+    padding-left: #{15 / $base-font-size}rem;    
+  }
+  padding-right: #{15 / $base-font-size}rem;
+}
+
+.tools_frame_forbidden {
+  text-align: center;
+  align-items: center;
+}
+
+.tools_frame_forbidden_text {
+  display: inline-block;
+  color: $error;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.tools_frame_forbidden_svg {
+  display: block;
+  margin: auto;
+  width: #{30 / $base-font-size}rem;
+  height: #{30 / $base-font-size}rem;
+}
+
+.tools_frame_text {
+  text-align: center;
+}
+
+.tools_frame_text p {
+  display: block;
+  margin: auto;
+  color: $error;
+  font-weight: bold;
+  font-style: oblique;
+}

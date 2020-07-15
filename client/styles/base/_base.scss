@@ -1,0 +1,57 @@
+body {
+  font-size: #{$base-font-size}px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+aside {
+  position: absolute;
+  display: flex;
+  top: 2rem;
+}
+
+p {
+  font-size: #{14 / $base-font-size}em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: #{18 / $base-font-size}em;
+  text-align: center;
+  @include themify() {
+    border-bottom: 3px dashed map-get($theme-map, 'border-color');
+  }
+}
+
+h2 {
+  font-size: #{16 / $base-font-size}em;
+  text-align: center;
+  @include themify() {
+    border-bottom: 2px dashed map-get($theme-map, 'border-color');
+  }
+}
+
+h3 {
+  font-size: #{14 / $base-font-size}em; 
+  font-weight: normal;
+  text-align: center;
+  @include themify() {
+    border-bottom: 1px dashed map-get($theme-map, 'border-color');
+  }
+}
+h4 {
+  font-size: #{10 / $base-font-size}em; 
+  font-weight: normal;
+}
+h5 {
+  font-size: #{8 / $base-font-size}em; 
+  font-weight: normal;
+}
+h6 {
+  font-size: #{6 / $base-font-size}em;
+  font-weight: normal;
+}

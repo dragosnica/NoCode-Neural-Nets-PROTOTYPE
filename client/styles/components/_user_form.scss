@@ -1,0 +1,82 @@
+.userForm_container {
+  height: 100%;
+  margin-top: #{150 / $base-font-size}rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.userForm_title {
+  position: relative;
+  color: $ncnn_green;
+  font-size: #{24 / $base-font-size}rem;
+}
+
+.userForm_label {
+  font-size: #{12 / $base-font-size}rem;
+  margin-top: #{25 / $base-font-size}rem;
+  margin-bottom: #{7 / $base-font-size}rem;
+  display: block;
+}
+
+.userForm_label_header {
+  // display: flex;
+  font-size: #{12 / $base-font-size}rem;
+  text-align: center;
+}
+
+.userForm_input {
+  font-size: #{12 / $base-font-size}rem;
+  width: #{300 / $base-font-size}rem;
+  height: #{30 / $base-font-size}rem;
+  border-color: $ncnn_green;
+}
+
+.userForm_input::placeholder {
+  font-size: #{12 / $base-font-size}rem;
+}
+
+.userForm_form {
+  position: relative;
+}
+
+.userForm_form input[type="submit"] {
+  @extend %forms-button;
+}
+
+.userForm_form input[type="submit"]:disabled {
+  cursor: not-allowed;
+}
+
+.userForm_nav {
+  font-size: #{12 / $base-font-size}rem;
+  padding-top: #{15 / $base-font-size}rem;
+}
+
+.userForm_nav button span{
+  font-size: #{12 / $base-font-size}rem;
+}
+
+.userForm_confirmation {
+  font-size: #{12 / $base-font-size}rem;
+  font-weight: bold;
+  padding-top: #{15 / $base-font-size}rem;
+}
+
+.userForm_pw_visibility_icon {
+  position: relative;
+  font-size: #{12 / $base-font-size}rem;
+  right: 10%;
+}
+
+.userForm_pw_visibility_icon:hover {
+  color: $ncnn_green;
+  cursor: pointer;
+}
+
+.userForm_error {
+  font-size: #{10 / $base-font-size}rem;
+  color: $error;
+  font-style: italic;
+}

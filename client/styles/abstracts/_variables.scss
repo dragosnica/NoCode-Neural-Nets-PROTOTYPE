@@ -1,0 +1,40 @@
+$base-font-size: 12;
+$ncnn-green: #0a8f1b;
+$ncnn-green-grd: #078d19;
+$primary-text-color: #333;
+$secondary-text-color: #464444;
+$base-background-color: #e6ece6;
+$base-background-color-grd: #e6f0e6;
+$shadow-color1: #0000001c;
+$shadow-color2: #00000014;
+$border-color: #bbbaba;
+$error: #cc4a4a;
+
+
+$themes: (
+  light: (
+    border-color: #cadac4,
+    dropdown-color: #414141,
+    nav-background-color: $base-background-color,
+    nav-background-color-grd: $base-background-color-grd,
+    nav-header-hover-color: $ncnn-green,
+    nav-header-hover-color-grd: $ncnn-green-grd,
+    nav-subitem-hovered-text-color: white,
+    modal-background-color: $base-background-color,
+    modal-border-color: rgba(17, 17, 17, 0.3),
+    shadow-color: rgba(0, 0, 0, 0.16),
+    map-buttons-color: rgb(219, 207, 164),
+    map-buttons-color-grd: rgb(221, 211, 173),
+    map-buttons-hover-color: rgba(240, 210, 100, 1),
+    map-buttons-hover-color-grd: rgb(235, 208, 111),
+    icon-toast-hover-color: #474545,
+  ),
+);
+
+$form-button-background-color: white;
+$form-button-color: $ncnn-green;
+$form-button-background-hover-color: $ncnn-green-grd;
+$form-button-background-active-color: $ncnn-green-grd;
+$form-button-hover-color: white;
+$form-button-active-color: white;
+$form-navigation-options-color: #999999;

@@ -1,0 +1,71 @@
+.workspace {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.workspace_close_button {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.workspace_popup_actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.workspace_confirmation_small {
+  @extend %forms-button;
+  margin-top: #{10 / $base-font-size}rem;
+  margin-bottom: #{10 / $base-font-size}rem;
+  width: 20%;
+  display: inline-block;
+}
+
+.workspace_confirmation_small:hover {
+  border-color: $form-button-background-hover-color;
+  background-color: $form-button-background-hover-color;
+  color: $form-button-hover-color;
+}
+
+.workspace_confirmation_medium {
+  @extend %forms-button;
+  margin-top: #{10 / $base-font-size}rem;
+  margin-bottom: #{10 / $base-font-size}rem;
+  width: 40%;
+  display: inline-block;
+}
+
+.workspace_confirmation_medium:hover {
+  border-color: $form-button-background-hover-color;
+  background-color: $form-button-background-hover-color;
+  color: $form-button-hover-color;
+}
+
+.workspace_confirmation_large {
+  @extend %forms-button;
+  margin-top: #{10 / $base-font-size}rem;
+  margin-bottom: #{10 / $base-font-size}rem;
+  width: 100%;
+  display: inline-block;
+}
+
+.workspace_confirmation_large:hover {
+  border-color: $form-button-background-hover-color;
+  background-color: $form-button-background-hover-color;
+  color: $form-button-hover-color;
+}

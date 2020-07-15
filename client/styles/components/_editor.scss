@@ -1,0 +1,200 @@
+.editor {
+  position: relative;
+  flex: 1 0 auto;
+  min-height: #{600 / $base-font-size}rem;
+  margin-top: #{30 / $base-font-size}rem;
+  margin-left: #{30 / $base-font-size}rem;
+  margin-right: #{30 / $base-font-size}rem;
+  @include themify() {
+    border: 3px solid map-get($theme-map, 'border-color');
+  }
+}
+
+.editor_main {
+  position: absolute;
+  height: 97%;
+  width: 100%;
+}
+
+.editor_built_network {
+  position: absolute;
+}
+
+.editor_layer_img {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  z-index: 9999;
+  padding-left: #{10 / $base-font-size}rem;
+  cursor: move;
+}
+
+.editor_map {
+  float: left;
+  width: 90.6%;
+  display: block;
+  height: 100%;
+  @include themify() {
+    background-color: getThemifyVariable('nav-background-color');
+    border-left: 3px solid map-get($theme-map, 'border-color');
+  }
+  // overflow: scroll;
+}
+
+.editor_drop_section {
+  float: left;
+  text-align: center;
+  line-height: #{500 / $base-font-size}rem;
+  width: 9%;
+  height: 100%;
+  background-color: rgb(241, 243, 240);
+}
+
+.editor_drop_overlay {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  opacity: 0.1;
+  background-color: grey;
+}
+
+.editor_drop_overlay_text {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.editor_form_section {
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  // display: inline-block;
+  position: relative;
+  z-index: 9999;
+}
+
+.editor_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.editor_form_title {
+  font-size: #{15 / $base-font-size}rem;
+}
+
+.editor_form_label {
+  font-size: #{12 / $base-font-size}rem;
+  display: block;
+}
+
+.editor_form_input {
+  font-size: #{12 / $base-font-size}rem;
+  width: #{200 / $base-font-size}rem;
+  height: #{20 / $base-font-size}rem;
+  border-color: $ncnn_green;
+}
+
+.editor_form_checkbox {
+  height: #{15 / $base-font-size}rem;
+  width: #{15 / $base-font-size}rem;
+  -webkit-appearance: none;
+  border: 1px solid $primary-text-color;
+  border-radius: #{3 / $base-font-size}rem;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.editor_form_checkbox:checked {
+  border: 1px solid $primary-text-color;
+  background-color: $ncnn_green;
+}
+
+.editor_form_checkbox:checked::before {
+  content: '\2713';
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+.editor_form_confirmation {
+  @extend %forms-button;
+  margin-top: #{10 / $base-font-size}rem;
+  margin-bottom: #{10 / $base-font-size}rem;
+}
+
+.btn-gradient {
+  margin: #{3 / $base-font-size}rem;
+  text-decoration: none;
+  color: white;
+  padding: #{10 / $base-font-size}rem #{20 / $base-font-size}rem;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  // border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px #999;
+}
+
+.btn-gradient img {
+  width: #{20 / $base-font-size}rem;
+  height: #{20 / $base-font-size}rem;
+}
+
+.btn-gradient.small {
+  padding: #{3 / $base-font-size}rem #{5 / $base-font-size}rem;
+  font-size: $base-font-size;
+}
+
+.btn-gradient.yellow {
+  @include themify() {
+    background: getThemifyVariable('map-buttons-color');
+    background: -moz-linear-gradient(top, getThemifyVariable('map-buttons-color') 0%, getThemifyVariable('map-buttons-color-grd') 100%);
+    background: -webkit-gradient(
+      left top,
+      left bottom,
+      color-stop(0%, getThemifyVariable('map-buttons-color')),
+      color-stop(100%, getThemifyVariable('map-buttons-color-grd'))
+    );
+    background: -webkit-linear-gradient(top, getThemifyVariable('map-buttons-color') 0%, getThemifyVariable('map-buttons-color-grd') 100%);
+    background: -o-linear-gradient(top, getThemifyVariable('map-buttons-color') 0%, getThemifyVariable('map-buttons-color-grd') 100%);
+    background: -ms-linear-gradient(top, getThemifyVariable('map-buttons-color') 0%, getThemifyVariable('map-buttons-color-grd') 100%);
+    background: linear-gradient(to bottom, getThemifyVariable('map-buttons-color') 0%, getThemifyVariable('map-buttons-color-grd') 100%);
+  }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbcfa4', endColorstr='#ddd3ad', GradientType=0 );
+}
+
+.btn-gradient.yellow:hover {
+  @include themify() {
+    background: getThemifyVariable('map-buttons-hover-color');
+    background: -moz-linear-gradient(top, getThemifyVariable('map-buttons-hover-color') 0%, getThemifyVariable('map-buttons-hover-color-grd') 100%);
+    background: -webkit-gradient(
+      left top,
+      left bottom,
+      color-stop(0%, getThemifyVariable('map-buttons-hover-color')),
+      color-stop(100%, getThemifyVariable('map-buttons-hover-color-grd'))
+    );
+    background: -webkit-linear-gradient(top, getThemifyVariable('map-buttons-hover-color') 0%, getThemifyVariable('map-buttons-hover-color-grd') 100%);
+    background: -o-linear-gradient(top, getThemifyVariable('map-buttons-hover-color') 0%, getThemifyVariable('map-buttons-hover-color-grd') 100%);
+    background: -ms-linear-gradient(top, getThemifyVariable('map-buttons-hover-color') 0%, getThemifyVariable('map-buttons-hover-color-grd') 100%);
+    background: linear-gradient(to bottom, getThemifyVariable('map-buttons-hover-color') 0%, getThemifyVariable('map-buttons-hover-color-grd') 100%);
+  }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d264', endColorstr='#ebd06f', GradientType=0 );
+}
+
+.btn-gradient.yellow:active {
+  @include themify() {
+    background: getThemifyVariable('map-buttons-hover-color');
+  }
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
